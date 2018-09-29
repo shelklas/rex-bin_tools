@@ -15,6 +15,9 @@ end
 class FileHeaderError < ParseError
 end
 
+class InvalidDLLTypeError < ParseError
+end
+
 class OptionalHeaderError < ParseError
 end
 
