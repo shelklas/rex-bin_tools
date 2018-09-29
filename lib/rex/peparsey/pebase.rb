@@ -1373,6 +1373,9 @@ class PeBase
       self._exports_cache  = _load_exports
       self._exports_cached = true
     end
+
+    raise InvalidDLLTypeError, "No entries found. Check that DLL is reflective.", caller if _exports_cache.nil?
+
     return _exports_cache
   end
 
